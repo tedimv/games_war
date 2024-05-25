@@ -8,6 +8,8 @@ use bevy_asset_loader::prelude::*;
 use components::game_state::GameState;
 use plugins::background::BackgroundPlugin;
 use plugins::camera::CameraPlugin;
+use plugins::navigation::NavigationPlugin;
+use plugins::routes::main_menu::MainMenuPlugin;
 use resources::display_settings::{DisplaySettings, ResolutionOpt};
 use resources::sprite_assets::SpriteAssets;
 
@@ -31,8 +33,10 @@ fn main() {
 
     App::new()
         .add_plugins((
-            CameraPlugin {},
-            BackgroundPlugin {},
+            CameraPlugin,
+            BackgroundPlugin,
+            MainMenuPlugin,
+            NavigationPlugin,
             DefaultPlugins.set(WindowPlugin {
                 primary_window: Some(Window {
                     mode: WindowMode::BorderlessFullscreen,

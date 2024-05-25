@@ -3,10 +3,15 @@ use bevy_asset_loader::prelude::*;
 
 #[derive(AssetCollection, Resource)]
 pub struct SpriteAssets {
-    #[asset(path = "backgrounds/1.png")]
-    pub background_1: Handle<Image>,
-    #[asset(path = "backgrounds/2.png")]
-    pub background_2: Handle<Image>,
+    #[asset(path = "backgrounds/in_menu/1.png")]
+    pub background_1_in_menu: Handle<Image>,
+    #[asset(path = "backgrounds/in_game/1.png")]
+    pub background_1_in_game: Handle<Image>,
+
+    #[asset(path = "backgrounds/in_menu/2.png")]
+    pub background_2_in_menu: Handle<Image>,
+    #[asset(path = "backgrounds/in_game/2.png")]
+    pub background_2_in_game: Handle<Image>,
 
     #[asset(path = "ui/buttons/play.png")]
     pub btn_play: Handle<Image>,
@@ -19,8 +24,6 @@ pub struct SpriteAssets {
     pub btn_quit_active: Handle<Image>,
 
     // background: Option<Handle<Image>>,
-    #[asset(path = "backgrounds/in_menu/1.png")]
-    pub background: Handle<Image>,
     #[asset(path = "cards/back.png")]
     pub card_back: Handle<Image>,
 }
